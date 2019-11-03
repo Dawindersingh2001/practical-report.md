@@ -224,8 +224,150 @@ int main()
     return 0;
 }
 ```
-Output of programs
+Output of programsg 
 ```C
 Input week number(1-7): 2
 Tuesday
+```
+#.11 programe to make a calculator using switch case 
+```C
+#include<stdio.h>
+int main() {
+    char operator;
+    double firstNumber,secondNumber;
+    printf("Enter an operator (+, -, *,): ");
+    scanf("%c", &operator);
+    printf("Enter two operands: ");
+    scanf("%lf %lf",&firstNumber, &secondNumber);
+    switch(operator)
+    {
+        case '+':
+            printf("%.1lf + %.1lf = %.1lf",firstNumber, secondNumber, firstNumber + secondNumber);
+            break;
+        case '-':
+            printf("%.1lf - %.1lf = %.1lf",firstNumber, secondNumber, firstNumber - secondNumber);
+            break;
+        case '*':
+            printf("%.1lf * %.1lf = %.1lf",firstNumber, secondNumber, firstNumber * secondNumber);
+            break;
+        case '/':
+            printf("%.1lf / %.1lf = %.1lf",firstNumber, secondNumber, firstNumber / secondNumber);
+            break;
+        
+        default:
+            printf("Error! operator is not correct");
+    }
+    
+    return 0;
+}
+```
+Output
+```C
+Enter an operator (+, -, *,): *
+Enter two operands: 1.5
+4.5
+1.5 * 4.5 = 6.8
+
+```
+# 12. programs to cheak leap of year
+```C
+#include <stdio.h>
+int main()
+{
+    int year;
+    printf("Enter a year: ");
+    scanf("%d",&year);
+    if(year%4 == 0)
+    {
+        if( year%100 == 0)
+        {
+            
+            if ( year%400 == 0)
+                printf("%d is a leap year.", year);
+            else
+                printf("%d is not a leap year.", year);
+        }
+        else
+            printf("%d is a leap year.", year );
+    }
+    else
+        printf("%d is not a leap year.", year);
+    
+    return 0;
+}
+```
+Output 1
+```C
+
+Enter a year: 1900
+1900 is not a leap year.
+```
+# 13. programs to cheak prime number or not
+```C
+#include <stdio.h>
+int main()
+{
+    int n, i, flag = 0;
+    printf("Enter a positive integer: ");
+    scanf("%d", &n);
+    for(i = 2; i <= n/2; ++i)
+    {
+       
+        if(n%i == 0)
+        {
+            flag = 1;
+            break;
+        }
+    }
+    if (n == 1) 
+    {
+      printf("1 is neither a prime nor a composite number.");
+    }
+    else 
+    {
+        if (flag == 0)
+          printf("%d is a prime number.", n);
+        else
+          printf("%d is not a prime number.", n);
+    }
+    
+    return 0;
+}
+```
+Output
+```C
+
+Enter a positive integer: 29
+29 is a prime number.
+```
+# 14. programs to find number pallindrome or not
+```C
+#include <stdio.h>
+int main()
+{
+    int n, reversedInteger = 0, remainder, originalInteger;
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+    originalInteger = n;
+    
+    while( n!=0 )
+    {
+        remainder = n%10;
+        reversedInteger = reversedInteger*10 + remainder;
+        n /= 10;
+    }
+    
+    if (originalInteger == reversedInteger)
+        printf("%d is a palindrome.", originalInteger);
+    else
+        printf("%d is not a palindrome.", originalInteger);
+    
+    return 0;
+}
+```
+output 
+```C
+
+Enter an integer: 1001
+1001 is a palindrome.
 ```
