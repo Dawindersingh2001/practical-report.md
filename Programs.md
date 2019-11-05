@@ -764,3 +764,173 @@ Product of entered matrices:-
 3	3	2	
 3	4	5
 ```
+# 17 programs to find squre of number using function 
+```C
+#include<stdio.h>
+
+int square(int); 
+
+int main()
+{
+     int number, answer;
+    
+     printf("Enter your number:");
+     scanf("%d", &number);
+    
+     answer = square(number);  
+    
+     printf("Square of %d is %d.", number, answer);
+}
+
+int square(int n)
+{
+     
+     return(n*n); 
+}
+```
+Output of the Program:
+```C
+Enter your number:5
+Square of 5 is 25.
+```
+# 18 programs to swape a number by call by value 
+```C
+#include <stdio.h>
+ 
+ 
+void swap(int, int);
+ 
+int main()
+{
+   int x, y;
+ 
+   printf("Enter the value of x and y\n");
+   scanf("%d%d",&x,&y);
+ 
+   printf("Before Swapping\nx = %d\ny = %d\n", x, y);
+ 
+   swap(x, y); 
+ 
+   printf("After Swapping\nx = %d\ny = %d\n", x, y);
+ 
+   return 0;
+}
+ 
+void swap(int a, int b)
+{
+   int temp;
+ 
+   temp = b;
+   b = a;
+   a = temp;
+    printf("Values of a and b is %d  %d\n",a,b);
+}
+```
+Output:
+```C
+Enter the value of x and y
+Before Swapping
+x = 10
+y = 5
+Values of a and b is 5 10
+After Swapping
+x = 10
+y = 5
+```
+# 19 programs to swape two number by call by refernce 
+```C
+#include <stdio.h>
+ 
+int main()
+{
+  int x, y, t;
+ 
+  printf("Enter two integers\n");
+  scanf("%d%d", &x, &y);
+ 
+  printf("Before Swapping\nFirst integer = %d\nSecond integer = %d\n", x, y);
+ 
+  t = x;
+  x = y;
+  y = t;
+ 
+  printf("After Swapping\nFirst integer = %d\nSecond integer = %d\n", x, y);
+ 
+  return 0;
+}
+```
+The output of the program:
+```C
+Enter two integers
+23
+45
+Before Swapping
+First integer = 23
+Second integer = 45
+After Swapping
+First integer = 45
+Second integer = 23
+```
+# 20 programs to find factorial of number using recursion 
+```C
+#include<stdio.h>
+int find_factorial(int);
+int main()
+{
+   int num, fact;
+   
+   printf("\nEnter any integer number:");
+   scanf("%d",&num);
+ 
+   
+   fact =find_factorial(num);
+ 
+   
+   printf("\nfactorial of %d is: %d",num, fact);
+   return 0;
+}
+int find_factorial(int n)
+{
+   
+   if(n==0)
+      return(1);
+ 
+   
+   return(n*find_factorial(n-1));
+}
+```
+Output:
+```C
+
+Enter any integer number: 4
+```
+# programe to intialization or disply structure 
+```C
+#include <stdio.h>
+
+struct employee{
+	char name[30];
+	int empId;
+	float salary;
+};
+
+int main()
+{
+	struct employee emp={"Mike",1120,76909.00f};
+	
+	printf("\n Name: %s"	,emp.name);
+	printf("\n Id: %d"		,emp.empId);
+	printf("\n Salary: %f\n",emp.salary);
+	return 0;
+}
+```
+Output
+```C
+ Name: Mike 
+ Id: 1120 
+ Salary: 76909.000000
+
+factorial of 4 is: 24
+```
+
+ 
