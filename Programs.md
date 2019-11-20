@@ -2,7 +2,7 @@
 ## NAME-*DAWINDER SINGH*
 ## ROLL NO-*1915019*
 BRANCH-COMPUTER SCIENCE*
-![LOGO](
+![LOGO]()
 # 1.Programs to disply a welcome message using puts
 ```C
 #include<stdio.h>
